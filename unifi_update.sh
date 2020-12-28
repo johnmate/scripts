@@ -1,6 +1,6 @@
 #!/bin/bash
 #Update UniFi:
-# curl -s http://server/path/script.sh | bash -s arg1 arg2
+# curl -s https://raw.githubusercontent.com/johnmate/scripts/main/unifi_update.sh?token=ABVJ2AJCTREA4YITX4M2F4275IC3S | bash -s 6.0.43
 
 #Set version numbers for download:
 unifiversion=$1
@@ -9,7 +9,7 @@ unifiversion=$1
 systemctl stop unifi
 
 #Download latest software:
-wget "http://dl.ubnt.com/unifi/$unifiversion/UniFi.unix.zip" -O /tmp/UniFi.unix.zip
+curl -s "http://dl.ubnt.com/unifi/$unifiversion/UniFi.unix.zip" -o /tmp/UniFi.unix.zip
 
 #Extract UniFi Video software:
 unzip -qo /tmp/UniFi.unix.zip -d /opt
