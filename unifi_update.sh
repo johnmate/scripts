@@ -1,6 +1,6 @@
 #!/bin/bash
 #Update UniFi:
-# curl -s https://raw.githubusercontent.com/johnmate/scripts/main/unifi_update.sh?token=ABVJ2AJCTREA4YITX4M2F4275IC3S | bash -s 6.0.43
+# curl -s https://raw.githubusercontent.com/johnmate/scripts/main/unifi_update.sh | bash -s 6.0.43
 
 #Set version numbers for download:
 unifiversion=$1
